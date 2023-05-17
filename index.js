@@ -1,20 +1,17 @@
 const express = require('express');
 const app = express();
+const set = new Set([1, 2, 3]);
+set.add(4);
+set.add(4);
+set.has(4);
 
-const obj = {
-    name: 'Abu',
-    age: 25,
-    "key-three": function() {
-        console.log(this.name);
-    }
+console.log(`${set.delete(3)}`);
+console.log(`${set.has(4)}`);
+console.log(`${set.size}`);
+// console.log(`${set.clear()}`);
+for (const item of set) {
+    console.log(item);
 }
-obj.hobby = 'football',
-    console.log(obj.name);
-console.log(obj['age'])
-console.log(obj['key-three']);
-console.log(obj);
-obj.sayMyName();
-
 
 
 
