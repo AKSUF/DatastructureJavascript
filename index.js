@@ -1,7 +1,5 @@
 const express = require('express');
 const app = express();
-
-
 const arr = [1, 2, 3, 4, 'Abu']
 arr.push(5);
 console.log(arr);
