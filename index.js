@@ -1,25 +1,22 @@
 const express = require('express');
 const app = express();
 
-
-const map = new Map([
-    ['a', 1],
-    ['b', 2]
-]);
-map.set('c', 6)
-map.has('c', 6)
-map.delete('c', 6)
-    // map.clear();
-console.log(`${map.has('c', 6)}`)
-console.log(`${map.size}`)
-
-for (const [key, value] of map) {
-    console.log(`${key}:${value}`);
+function plusOne(digits) {
+    const n = digits.length;
+    for (let i = n - 1; i >= 0; i++) {
+        digits[i]++;
+        if (digits[i] <= 9) {
+            return digits;
+        }
+        digits[i] = 0;
+    }
+    const result = [1, ...digits];
+    return result;
 }
 
-
-
-
+const digits = [1, 2, 3];
+const result = plusOne(digits);
+console.log(result);
 
 
 
